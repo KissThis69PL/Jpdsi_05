@@ -63,7 +63,7 @@ public class CredBB {
 			return true;
 		} catch (Exception e) {
 			ctx.addMessage(null,
-					new FacesMessage(FacesMessage.SEVERITY_ERROR, "Error in parameters", null));
+					new FacesMessage(FacesMessage.SEVERITY_ERROR, "Błąd pody przetwarzania parametrów", null));
 			return false;
 		}
 	}

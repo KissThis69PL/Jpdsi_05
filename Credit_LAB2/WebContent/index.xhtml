@@ -3,26 +3,37 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
 <h:head>
 	<title>Credit</title>
 </h:head>
 <h:body>
 
-	<h1>Calculator Credit</h1>
+    <p:panel header="Calculator Credit" toggleable="true" style="margin: 1em auto;">
 
-	<h:form id="nor">
-  		Value: <h:inputText value="#{credBB.x}" />
+	<h:form id="bla">
+	<span class="ui-float-label">
+  		<p:inputText value="#{credBB.x}" />
+  		<p:outputLabel for="@previous" value="Value (US)"/>
+  		</span>
 		<br />
-  		Time: <h:inputText value="#{credBB.y}" />
+		<span class="ui-float-label">
+  		<p:inputText value="#{credBB.y}" />
+  		<p:outputLabel for="@previous" value="Credit interest"/>
+  		</span>
 		<br />
-		Percentt: <h:inputText value="#{credBB.z}" />
+		<span class="ui-float-label">
+		<p:inputText value="#{credBB.z}" />
+		<p:outputLabel for="@previous" value="Payback period in years"/>
+		</span>
 		<br />
 		<h:messages id="msg" />
 
-		<h:commandButton value="DO IT " action="#{credBB.calc()}"/>
+		<h:commandButton value="DO IT" action="#{credBB.calc()}"/>
 		<br />
 	</h:form>
+	</p:panel>
 
 </h:body>
 </html>
