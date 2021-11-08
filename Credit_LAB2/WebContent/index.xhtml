@@ -14,8 +14,11 @@
 
 	<h:form id="bla">
 	<span class="ui-float-label">
-  		<p:inputText value="#{credBB.x}" />
-  		<p:outputLabel for="@previous" value="Value (US)"/>
+  		<h:outputLabel for="@previous" value="Value (US)"/>
+            <p:inputText id="number" value="#{credBB.x}" label="Number">
+                <f:validateLength minimum="6"/>
+            </p:inputText>
+            <h:outputText value="#{credBB.x}"/>
   		</span>
 		<br />
 		<span class="ui-float-label">
